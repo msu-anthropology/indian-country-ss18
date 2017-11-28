@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../favicon.ico">
+
+    <title>DAEA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../sites/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../sites/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../sites/css/leaflet.css" />
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="js/ie10-viewport-bug-workaround.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+      
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="navbar-brand"<strong>Digital Atlas of Egyptian Archaeology</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+      
+     <div id="detail">
+      <h1>Figure Code example</h1>
+      <br>
+      <h3>The code on the left produces the image on the right:</h3>
+      <br>
+		    <div style="margin-top: 30px; background-color: #f9f2f4; padding-left: 2%; width: 50%; float: left">
+		      <code style="font-size: medium">
+			    	<p style="margin-top: 0em!important; margin-bottom: 0px!important;">&lt;figure style="float: right; width: 35%; padding-right: 20px; padding-bottom: 5px;"&gt;</p>
+			  		<p style="padding-left:7%; padding-right: 1%; margin-top: 0em!important; margin-bottom: 0px!important;">&lt;img src="images/gebel2.jpeg" width="100%" /&gt;</p>
+			  		<p style="padding-left:7%; padding-right: 1%; margin-top: 0em!important; margin-bottom: 0px!important;">&lt;figcaption&gt;&lt;a href="#" rel="citation" data-toggle="popover" data-content="The Egypt Exploration Society. Gebel el Haridi, Quarry F entrance. Flickr, accessed 24 October 2016."&gt;Image 1&lt;/a&gt; - "Gebel el Haridi, Quarry F Entrance"&lt;/figcaption&gt;</p>
+			    	<p style="margin-top: 0em!important; margin-bottom: 0px!important;">&lt;/figure&gt;</p>
+          </code>
+		    </div>
+		    <figure style="float: right; width: 35%; padding-right: 20px; padding-bottom: 5px;">
+			    <img src="gebel2.jpeg" width="100%" />
+			    <figcaption><a href="#" rel="citation" data-toggle="popover" data-content="The Egypt Exploration Society. Gebel el Haridi, Quarry F entrance. Flickr, accessed 24 October 2016.">Image 1</a> - "Gebel el Haridi, Quarry F Entrance"</figcaption>
+		    </figure>
+		    <div style="clear: both"></div>	
+			<br>
+			<br>
+			<h2 style="float:left"><a href="https://github.com/msu-anthropology/daea-fs16/wiki/Images-with-Captions">Back to "Images with Captions"</a></h2>
+			<h2 style="float:right"><a href="https://github.com/msu-anthropology/daea-fs16/wiki">Back to Beginning of Wiki</a></h2>
+		</div>
+			
+       <br>
+         <br>
+
+    <!-- FOOTER -->  
+    <div class="footer">
+      <div class="container">
+       <table class="logos" width="100%">
+	    <td>
+		 <a href="http://anthropology.msu.edu" target="_blank"><img align="left" src="../images/anp_logo.png" width="583" height="34px" alt="Michigan State University Department of Anthropology" /></a>
+   	   	</td>
+		<td>
+		 <a href="http://leadr.msu.edu" target="_blank"><img align="right" src="../images/leadr_logo.png" style="height:50px;margin-top:5px" alt="Lab for the Education and Advancement in Digital Research - LEADR" /></a>
+	    </td>
+	   </table>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../sites/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a[rel=citation]").popover({
+				placement : 'top'
+			}).click(function (p) {
+				p.preventDefault();
+				var $self = $(this);
+				setTimeout(function () {
+					$self.popover('hide');
+				}, 4000);
+			});
+		});
+	</script>
+	</body></html>

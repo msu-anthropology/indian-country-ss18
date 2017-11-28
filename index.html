@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>This is Indian Country</title>
+
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet.css" />
+    
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="js/ie10-viewport-bug-workaround.js"></script>-->
+    
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+      
+      <!-- MODAL -->
+      
+      <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-dialog modal-vertical-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Welcome to This is Indian Country</h4>
+                    </div>
+                    <div class="modal-body">
+                        <em>This is Indian Country</em> is a digital cultural map of indigenous community issues worldwide. Collaboratively produced at Michigan State University during the Spring 2016 semester by the students registered in the Contemporary American Indian Communities class (ANP 433), <em>This is Indian Country</em> represents an experiment in applied digital anthropology undergraduate learning.  
+
+                    </div>
+                    <div class="modal-footer">
+                        <label ><input class="dont" type="checkbox" name="dismiss"> Don't show again</label><br />
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="."><strong>This is Indian Country</strong></a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href=".">Issues Map</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="project.html">About the Project</a></li>
+				<li><a href="class.html">About the Class</a></li>
+                <li><a href="students.html">Students</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- MAP -->
+     <div id="map"></div>
+     
+    <!-- FOOTER -->  
+    <div class="footer">
+      <div class="container">
+       <p class="text-muted"><img src="images/anp_logo.png" width="583" height="34" alt="Michigan State University Department of Anthropology"></p> 
+       </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="leaflet-omnivore-master/leaflet-omnivore.js"></script>
+    <script src="js/leaflet.js"></script> 
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a[rel=citation]").popover({
+				placement : 'top'
+			}).click(function (p) {
+				p.preventDefault();
+				var $self = $(this);
+				setTimeout(function () {
+					$self.popover('hide');
+				}, 4000);
+			});
+		});
+	</script>
+      
+      
+ <!-- Initiates Modal and Uses cookies for Dont Show Again Checkbox -->     
+<script type="text/javascript">
+ $(document).ready(function () {
+    $('#myModal').modal();
+  
+   //check cookies
+    function setCookie(){
+        var dis = document.cookie;
+        while(dis.charAt(0)==" ") dis = dis.substring(1);
+        if(dis.substring(8,13)== "false"){
+            $('#myModal').modal('hide');
+        }
+        console.log(dis.substring(8,13));
+    }
+    setCookie();    
+     
+     
+      var $check = $("input.dont").click(function(){
+        if($("input.dont").is(":checked")){
+        document.cookie = "display=false";        
+        }else{
+        document.cookie = "display=true";        
+        }
+          
+      });
+ });
+</script>
+ 
+      
+      
+<!-- Centers Modal Vertically -->      
+<script type="text/javascript">
+      function centerModal() {
+    $(this).css('display', 'block');
+    var $dialog = $(this).find(".modal-dialog");
+    var offset = ($(window).height() - $dialog.height()) / 2;
+    // Center modal vertically in window
+    $dialog.css("margin-top", offset);
+}
+
+$('.modal').on('show.bs.modal', centerModal);
+$(window).on("resize", function () {
+    $('.modal:visible').each(centerModal);
+});
+</script>
+      
+      
+     
+<!-- Initiates Map and pulls data from .CSV --> 
+<script>
+
+            var map = L.map('map').setView([46.2058487,-100.961857], 3);
+
+            L.tileLayer('https://{s}.tiles.mapbox.com/v3/leadr.omi874md/{z}/{x}/{y}.png', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18,
+	minZoom: 2
+}).addTo(map);
+
+            //enter path for .csv here
+            omnivore.csv('sites/AA-sites-popup.csv')
+             .on('ready', function(layer) {
+       
+        this.eachLayer(function(marker) {
+          
+            // Bind a popup to each icon based on the same properties
+            // Adds coloumns of extra info to marker popup
+            marker.bindPopup(marker.toGeoJSON().properties.issue +
+                marker.toGeoJSON().properties.culture + '<br><br> ' +
+                marker.toGeoJSON().properties.info + '<br><br> ' +
+                marker.toGeoJSON().properties.link, {autoPanPadding: [5,55]});
+        });
+    })
+            .addTo(map);
+            
+</script>
+      
+
+
+
+</body></html>
