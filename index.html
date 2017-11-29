@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
     <title>This is Indian Country</title>
 
@@ -44,10 +44,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Welcome to This is Indian Country</h4>
+                        <h4 class="modal-title" id="myModalLabel">Welcome to This is Indian Country - Spring 2018</h4>
                     </div>
                     <div class="modal-body">
-                        <em>This is Indian Country</em> is a digital cultural map of indigenous community issues worldwide. Collaboratively produced at Michigan State University during the Spring 2016 semester by the students registered in the Contemporary American Indian Communities class (ANP 433), <em>This is Indian Country</em> represents an experiment in applied digital anthropology undergraduate learning.  
+                        <em>This is Indian Country</em> is a digital cultural map of indigenous community issues worldwide. Collaboratively produced at Michigan State University during the Spring 2018 semester by the students registered in the Contemporary American Indian Communities class (ANP 433), <em>This is Indian Country</em> represents an experiment in applied digital anthropology undergraduate learning.  
 
                     </div>
                     <div class="modal-footer">
@@ -59,44 +59,14 @@
         </div>
       </div>
     
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="."><strong>This is Indian Country</strong></a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href=".">Issues Map</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="project.html">About the Project</a></li>
-				<li><a href="class.html">About the Class</a></li>
-                <li><a href="students.html">Students</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+      <!-- cenralized navbar -->
+      <div id="central-nav"></div>
 
-    <!-- MAP -->
-     <div id="map"></div>
+      <!-- MAP -->
+      <div id="map"></div>
      
-    <!-- FOOTER -->  
-    <div class="footer">
-      <div class="container">
-       <p class="text-muted"><img src="images/anp_logo.png" width="583" height="34" alt="Michigan State University Department of Anthropology"></p> 
-       </div>
-    </div>
-
+      <!-- centralized footer -->  
+      <div id="central-foot"></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -118,7 +88,9 @@
 			});
 		});
 	</script>
-      
+
+    <!-- Calls centralized navbar and footer -->
+    <script src="centralize-nav-foot/nav-foot.js"></script>	
       
  <!-- Initiates Modal and Uses cookies for Dont Show Again Checkbox -->     
 <script type="text/javascript">
@@ -171,16 +143,21 @@ $(window).on("resize", function () {
 <!-- Initiates Map and pulls data from .CSV --> 
 <script>
 
-            var map = L.map('map').setView([46.2058487,-100.961857], 3);
+            var map = L.map('map', {
+				attributionControl: false
+			}).setView([46.2058487,-100.961857], 3);
 
             L.tileLayer('https://{s}.tiles.mapbox.com/v3/leadr.omi874md/{z}/{x}/{y}.png', {
-			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18,
-	minZoom: 2
-}).addTo(map);
-
+				maxZoom: 18,
+				minZoom: 2
+			}).addTo(map);
+			L.control.attribution().setPrefix(
+				'<a alt="A JS library for interactive maps" href="http://leafletjs.com" target="_blank">Leaflet</a>'
+			).addAttribution(
+				'Map data &copy; <a target="_blank" href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a target="_blank" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a target="_blank" href="http://mapbox.com">Mapbox</a>'
+			).addTo(map);
             //enter path for .csv here
-            omnivore.csv('sites/AA-sites-popup.csv')
+            omnivore.csv('sites-popup.csv')
              .on('ready', function(layer) {
        
         this.eachLayer(function(marker) {
