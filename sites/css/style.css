@@ -130,6 +130,12 @@ code {
 /* DETAIL page CSS
 -------------------------------------------------- */
 
+#detail {
+    padding: 50px;
+	background-color: #ffffff;
+	color: #000000;
+}
+
 #detail a {
 	color: #e69300;
 	text-decoration: none;

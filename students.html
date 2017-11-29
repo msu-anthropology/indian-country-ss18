@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
     <title>This is Indian Country</title>
 
@@ -37,33 +37,8 @@
   <body>
 
       
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="."><strong>This is Indian Country</strong></a>
-        </div>
-        <div class="collapse navbar-collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li><a href=".">Issues Map</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="project.html">About the Project</a></li>
-				<li><a href="class.html">About the Class</a></li>
-                <li><a href="students.html">Students</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+      <!-- cenralized navbar -->
+      <div id="central-nav"></div>
 
     <!-- Begin page content -->
       
@@ -104,13 +79,8 @@
        <br>
          <br>
 
-    <!-- FOOTER -->  
-    <div class="footer">
-      <div class="container">
-       <p class="text-muted"><img src="images/anp_logo.png" width="583" height="34" alt="Michigan State University Department of Anthropology"></p> 
-       </div>
-    </div>
-
+      <!-- centralized footer -->  
+      <div id="central-foot"></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -132,4 +102,8 @@
 			});
 		});
 	</script>
+
+    <!-- Calls centralized navbar and footer -->
+    <script src="centralize-nav-foot/nav-foot.js"></script>
+	
 	</body></html>

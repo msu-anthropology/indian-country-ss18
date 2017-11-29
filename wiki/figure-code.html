@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>DAEA</title>
+    <title>Indian Country</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../sites/css/bootstrap.css" rel="stylesheet">
@@ -28,6 +28,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+		#detail {
+		padding-bottom: 0px;
+		}
+	</style>
   </head>
 
   <body>
@@ -43,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <span class="navbar-brand"<strong>Digital Atlas of Egyptian Archaeology</strong></span>
+          <span class="navbar-brand"<strong>This Is Indian Country</strong></span>
         </div>
       </div>
     </div>
@@ -73,24 +78,12 @@
 			<h2 style="float:left"><a href="https://github.com/msu-anthropology/daea-fs16/wiki/Images-with-Captions">Back to "Images with Captions"</a></h2>
 			<h2 style="float:right"><a href="https://github.com/msu-anthropology/daea-fs16/wiki">Back to Beginning of Wiki</a></h2>
 		</div>
+		    <div style="clear: both"></div>	
 			
        <br>
-         <br>
 
-    <!-- FOOTER -->  
-    <div class="footer">
-      <div class="container">
-       <table class="logos" width="100%">
-	    <td>
-		 <a href="http://anthropology.msu.edu" target="_blank"><img align="left" src="../images/anp_logo.png" width="583" height="34px" alt="Michigan State University Department of Anthropology" /></a>
-   	   	</td>
-		<td>
-		 <a href="http://leadr.msu.edu" target="_blank"><img align="right" src="../images/leadr_logo.png" style="height:50px;margin-top:5px" alt="Lab for the Education and Advancement in Digital Research - LEADR" /></a>
-	    </td>
-	   </table>
-      </div>
-    </div>
-
+    <!-- centralized footer -->  
+	<div id="central-foot"></div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -110,4 +103,9 @@
 			});
 		});
 	</script>
+
+    <!-- Calls centralized navbar and footer -->
+	<script src="../centralize-nav-foot/sites-old-nav-foot.js"></script>	
+
+	
 	</body></html>
