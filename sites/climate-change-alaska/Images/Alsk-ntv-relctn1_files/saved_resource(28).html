@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://tpc.googlesyndication.com/safeframe/1-0-17/html/container.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>3821725/5409271</title>
+		<script type="text/javascript">
+			var click_url = 'https://ads.revjet.com/click/tag6805/7634848455258586644/1?_crm=2&__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&adkey=38b&hx=3756769&agrp=5139586&slot=tag6805&impts=1520868074531&ad=crv12067&_cx=$$CX$$&_cy=$$CY$$&_celt=$$ELT-ID$$&_celtid=$$ELT-IDS$$';
+			var click_target ='_blank';
+		</script>
+		<script src="./elements-2.3.0.js.download" type="text/javascript"></script>
+		<!--  -->
+		<!--  -->
+		<style type="text/css">
+			#container {
+			width: ${crv.relations.stages.get(0).targetEntity.relations.size.targetEntity.properties.width.values.get(0)}px;
+			height: ${crv.relations.stages.get(0).targetEntity.relations.size.targetEntity.properties.height.values.get(0)}px;
+			overflow:hidden;
+			position:relative;
+			background:%background%;
+			font-size:12px;
+			color:#000;
+			font-family:Arial, Helvetica, sans-serif;
+			text-align:left;
+			}
+			#outer_container {
+			width: ${crv.relations.stages.get(0).targetEntity.relations.size.targetEntity.properties.width.values.get(0)}px;
+			height: ${crv.relations.stages.get(0).targetEntity.relations.size.targetEntity.properties.height.values.get(0)}px;
+			position:relative;
+			}
+			.bar-elm {
+			display: table;
+			position:absolute;
+			}
+			.bar-elm-row {
+			display: table-row;
+			height: 100%;
+			}
+			.bar-elm .image-elm {
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			top:0;
+			left:0;
+			font-size:0px;
+			}
+			.bar-elm-cell {
+			display: table-cell;
+			position: relative;
+			vertical-align: middle;
+			}
+			* {
+			padding:0;
+			margin:0;
+			}
+			a {
+			text-decoration:none;
+			color:#000;
+			}
+			a:hover, a:hover * {
+			text-decoration:none;
+			}
+			img, a img{
+			border:none;
+			}
+			li {
+			list-style-type:none;
+			}
+			#ad_body.animation_stopped *, .animation_stopped #container * {
+			-webkit-animation: none !important;
+			animation: none !important;
+			}
+			#ad_body.animation_paused *, .animation_paused #container * {
+				-webkit-animation-play-state: paused !important;
+				animation-play-state: paused !important;
+			}
+			* {
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			body {
+			overflow: hidden;
+			}
+			.text-elm, .flash-elm, .block-elm, .html5-elm, .dropdown-elm, .textfield-elm, .animimage-elm{
+			position:absolute;
+			float:left;
+			display:block;
+			}
+			.ic0n-elm, .image-elm{
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			display:block;
+			}
+			.ic0n-elm .ic0n-container{
+			display:table;
+			width:100%;
+			height:100%;
+			}
+			.ic0n-elm .ic0n-container *{
+			box-sizing:border-box;
+			}
+			.ic0n-elm .ic0n-container div{
+			display:table-cell;
+			}
+			.ic0n-elm .ic0n-wrapper{
+			width:1px;
+			white-space:nowrap;
+			}
+			.ic0n-elm img, .ic0n-elm span{
+			display: inline-block;
+			vertical-align: middle;
+			}
+			.image-elm img{
+			width:100%;
+			height:100%;
+			}
+			.button-elm{
+			position:absolute;
+			display:block;
+			}
+			.button-elm .text-elm{
+			position:absolute;
+			float:left;
+			top:0;
+			left:0;
+			}
+			.button-elm .image-elm{
+			position:absolute;
+			float:left;
+			overflow:hidden;
+			top:0;
+			left:0;
+			}
+		</style>
+
+		<!--  -->
+		
+		<!--  -->
+		<script type="text/javascript">
+			/*Animation sequence fix*/
+			(function () {
+			var fired = false;
+			function animationSequenceFix() {
+			if (!fired) {
+				var elements = document.querySelectorAll('.animated-element'),
+				 pfx = ["webkit", "moz", "MS", "o", ""];
+			
+			function PrefixedEvent(element, type, callback) {
+			for (var p = 0; p < pfx.length; p++) {
+			if (!pfx[p]) type = type.toLowerCase();
+			element.addEventListener(pfx[p] + type, callback, false);
+			}
+			}
+				elements = Array.prototype.slice.call(elements);
+				for (var i = 0, l = elements.length; i < l; i++) {
+			PrefixedEvent(elements[i],'AnimationEnd', function (e) {
+			e.target.classList.add('run-next');
+			});
+				}
+				fired = true;
+			}
+				}
+			
+			if (window.addEventListener) {
+				window.addEventListener('message', function (e) { if (e.data && e.data === 'update') { animationSequenceFix();} }, false);
+			} else {
+				window.attachEvent("onmessage", function (e) { if (e.data && e.data === 'update') { animationSequenceFix();} });
+			}
+			if (document.addEventListener) { document.addEventListener('DOMContentLoaded', animationSequenceFix, false); } else { document.attachEvent("onDOMContentLoaded", animationSequenceFix); }
+			}());
+			
+			/* TextField onEnter */
+			(function() {
+			function Fill_Elm_Behavior(){
+				var elmClass = 'textfield-elm-input';
+				var elmList = document.querySelectorAll('.'+elmClass);
+				for (var i=0;i<elmList.length;i++) {
+					applyEvents(elmList[i]);
+				}
+				function applyEvents(elm) {
+					var Fill = elm;
+					Fill.addEventListener("keydown", function(e){
+						var keynum;
+						if (window.event) keynum = e.keyCode;
+						else if (e.which) keynum = e.which;
+						else return;
+						if (keynum == 13) window.open('https://ads.revjet.com/click/tag6805/7634848455258586644/1?_crm=2&__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&adkey=38b&hx=3756769&agrp=5139586&slot=tag6805&impts=1520868074531&ad=crv12067&_cx=$$CX$$&_cy=$$CY$$&_celt=$$ELT-ID$$&_celtid=$$ELT-IDS$$', '_blank');
+					}, false);
+				}
+			}
+			if (window.addEventListener) {
+				window.addEventListener('load', function() {Fill_Elm_Behavior();}, false);
+			} else {
+				window.attachEvent("onload", function() {Fill_Elm_Behavior();});
+			}
+			})();
+			
+		</script>
+			</head>
+	<body id="ad_body" marginwidth="0" marginheight="0">
+<!-- revjet-tracking -->
+		<img src="./999" style="position:absolute; visibility:hidden">
+
+<!-- /revjet-tracking -->
+		<style>
+ #container,#el3821719 { width: 970px; height: 250px; overflow: hidden; position: relative; font-size: 12px; color: #000; font-family: Arial, Helvetica, sans-serif; text-align: left; display: block;}* { padding: 0; margin: 0;}* { box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -webkit-box-sizing: border-box;}a { text-decoration: none; color: #000;}a:hover,a:hover * { text-decoration: none;}img,a img { border: none;}li { list-style-type: none;}#ad_body.animation_stopped *,.animation_stopped #container * { -webkit-animation: none !important; animation: none !important;}body { overflow: hidden;}.text-elm,.flash-elm,.block-elm,.html5-elm,.dropdown-elm,.textfield-elm,.animimage-elm,.border-elm { position: absolute; float: left; display: block;}.ic0n-elm,.image-elm,.animimage-elm { position: absolute; float: left; overflow: hidden; display: block;}.ic0n-elm .ic0n-container { display: table; width: 100%; height: 100%;}.ic0n-elm .ic0n-container * { box-sizing: border-box;}.ic0n-elm .ic0n-container div { display: table-cell;}.ic0n-elm .ic0n-wrapper { width: 1px; white-space: nowrap;}.ic0n-elm img,.ic0n-elm span { display: inline-block; vertical-align: middle;}.image-elm img { width: 100%; height: 100%;}.button-elm { position: absolute; display: block;}.button-elm .text-elm { position: absolute; float: left; top: 0; left: 0;}.button-elm .image-elm { position: absolute; float: left; overflow: hidden; top: 0; left: 0;}#container { width: 970px; height: 250px; overflow: hidden; position: relative; font-size: 12px; color: #000; font-family: Arial, Helvetica, sans-serif; text-align: left;}#outer_container { width: 970px; height: 250px; position: relative;}.bar-elm { display: table; position: absolute;}.bar-elm-row { display: table-row; height: 100%;}.bar-elm .image-elm { position: absolute; float: left; overflow: hidden; top: 0; left: 0; font-size: 0px;}.bar-elm-cell { display: table-cell; position: relative; vertical-align: middle;}
+
+
+
+</style>
+	<div id="container">
+ <div id="el3821719">
+  <style type="text/css">#elframe_element3821677{width:970px;height:250px;position:absolute;display:block;}
+
+</style>
+<div id="elframe_element3821677" class="animated-element" data-revjet-role="STAGE 1" data-revjet-role-id="3821707"><style type="text/css">#elframe_element3821680{width:970px;height:250px;position:absolute;display:block;}
+#el3821692{ display:block; left:0px;top:0px; transform: translateX(0px) translateY(0px) scale3d(1,1,1); -ms-transform: translateX(0px) translateY(0px) scale3d(1,1,1); -webkit-transform: translateX(0px) translateY(0px) scale3d(1,1,1); width:970px; height:250px; }html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{pointer-events:none;}#banner, #banner * {pointer-events:all;box-sizing:content-box !important;}#banner { position: absolute; overflow: hidden; -webkit-backface-visibility: hidden; width: 968px; height: 248px; background: #e2f0d7; border: 1px solid #ccc; top: 0px; left: 0px; margin: auto; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; opacity: 0; font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}.panel { position: absolute; width: 300px; height: 120px; left: 350px; opacity: 0;}h1 { font-size: 25px; text-align: center; font-weight: 400; color: #448214;}h2 { font-size: 80px; text-align: center; font-weight: 300; color: #448214;}h3 { font-size: 20px; text-align: center; font-weight: 300; color: #448214;}span { font-weight: 600;}#text1 { top: 42px;}#text2 { top: 65px; left: -250px;}#text3 { top: 146px;}#ratetable {position: absolute; left: 399px; top: 12px; z-index: 500;}.row {position: absolute; width: 558px; height: 45px; left: 600px; opacity: 0;}.divider { position: absolute; width: inherit; background-color: #bec3be; height: 1px; top: 44px; z-index: 5;}.rowbg { position: absolute; width: inherit; height: inherit; background: #e2f0d7;}.rowbgani { position: absolute; width: inherit; height: inherit; opacity: 0; z-index: 1; background-color: #64cbe5;}.rowbgover { position: absolute; width: inherit; height: inherit; opacity: 0; z-index: 2; background-color: #7ac142;}.tabletext {position: absolute; font-weight: 400; color: #31353b; font-size: 22px; width: 510px; top: 10px; left: 24px; z-index: 3;}.tabletext span { font-weight: 400; font-size: 17px;}#row2 { top: 45px;}#row3 { top: 90px;}#row4 { top: 135px;}#row5 { top: 180px;}#row5 .divider { opacity: 0;}#ttext2, #ttext5, #ttext8, #ttext11, #ttext14 { left: 52px; text-align: center;}#ttext3, #ttext6, #ttext9, #ttext12, #ttext15 { text-align: right;}#logo {position: absolute;width: 106px;height: 25px;left: 149px;top: 7px;background-image: url('https://cdn.revjet.com/~cdn/Ads/83/02/lt_052114_cleanratetable_15yrrate_ltgreen_970x250_logo.png');}#terms {position: absolute;width: 176px;height: 9px;left: 121px;top: 237px; font-family: Arial, sans-serif; font-size: 9px; color: #333; opacity: 0.5;}#cta {position: absolute; overflow: hidden;width: 274px;height: 48px;left: 62px;bottom: -50px;background-image: url('https://cdn.revjet.com/~cdn/Ads/5e/63/lt_052114_cleanratetable_15yrrate_ltgreen_970x250_cta.png'); opacity: 0; z-index: 3;}#shine { position: absolute; width: 200px; height: 59px; left: -220px; background-image: url('https://cdn.revjet.com/~cdn/Ads/af/b2/lt_052114_cleanratetable_15yrrate_ltgreen_970x250_shine.png'); background-size: cover; z-index: 5;}/* Invisible button for background clickthrough. */#hit {position: absolute;width: 100%;height: 100%;top: 0px;left: 0px;cursor: pointer;opacity: 0;z-index: 400;}
+
+
+.html5-elm { position: absolute; float: left; display: block;}</style>
+<div id="elframe_element3821680" class="animated-element run-animation-on-load" data-revjet-role="STAGE 1. SCENE 1" data-revjet-role-id="3821707.3821695"><a href="https://ads.revjet.com/click/tag6805/7634848455258586644/1?_crm=2&amp;__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&amp;adkey=38b&amp;hx=3756769&amp;agrp=5139586&amp;slot=tag6805&amp;impts=1520868074531&amp;ad=crv12067&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$" target="_blank" id="el3821692" class="animated-element html5-elm" data-element-type="html5" data-animation-timeout="" data-revjet-role="STAGE 1. SCENE 1. BACKGROUND" data-revjet-role-id="3821707.3821695.3821692" data-revjet-original-href="https://ads.revjet.com/click/tag6805/7634848455258586644/1?_crm=2&amp;__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&amp;adkey=38b&amp;hx=3756769&amp;agrp=5139586&amp;slot=tag6805&amp;impts=1520868074531&amp;ad=crv12067&amp;_cx=$$CX$$&amp;_cy=$$CY$$&amp;_celt=$$ELT-ID$$&amp;_celtid=$$ELT-IDS$$">
+	<link href="./css" rel="stylesheet" type="text/css">
+<script src="./green-sock-1498503330677.js.download"></script><div id="banner" style="opacity: 1;"> 
+ <div class="panel" id="text1" style="left: 50px; opacity: 1;"> 
+  <h1>Today's Mortgage Rates</h1> 
+ </div> 
+ <div class="panel" id="text2" style="left: 50px; opacity: 1;"><h2>3.75%</h2></div> 
+ <div class="panel" id="text3" style="left: 50px; opacity: 1;"> 
+  <h3><span>APR</span></h3> 
+ </div> 
+ <div id="ratetable"> 
+  <div class="row" id="row1" style="left: 0px; opacity: 1;"> 
+   <div class="divider"></div> 
+   <div class="tabletext" id="ttext1">
+    15-Year Fixed
+   </div> 
+   <div class="tabletext" id="ttext2">3.75%</div> 
+   <div class="tabletext" id="ttext3">3.75% APR</div> 
+   <div class="rowbgover" id="rowbgover1"></div> 
+   <div class="rowbgani" id="rowbgani1" style="opacity: 0;"></div> 
+   <div class="rowbg" id="rowbg1"></div> 
+  </div> 
+  <div class="row" id="row2" style="left: 0px; opacity: 1;"> 
+   <div class="divider"></div> 
+   <div class="tabletext" id="ttext4">
+    30-Year Fixed
+   </div> 
+   <div class="tabletext" id="ttext5">4.18%</div> 
+   <div class="tabletext" id="ttext6">4.18% APR</div> 
+   <div class="rowbgover" id="rowbgover2"></div> 
+   <div class="rowbgani" id="rowbgani2" style="opacity: 0;"></div> 
+   <div class="rowbg" id="rowbg2"></div> 
+  </div> 
+  <div class="row" id="row3" style="left: 0px; opacity: 1;"> 
+   <div class="divider"></div> 
+   <div class="tabletext" id="ttext7">
+    5/1 ARM
+   </div> 
+   <div class="tabletext" id="ttext8">3.50%</div> 
+   <div class="tabletext" id="ttext9">4.27% APR</div> 
+   <div class="rowbgover" id="rowbgover3"></div> 
+   <div class="rowbgani" id="rowbgani3" style="opacity: 0;"></div> 
+   <div class="rowbg" id="rowbg3"></div> 
+  </div> 
+  <div class="row" id="row4" style="left: 0px; opacity: 1;"> 
+   <div class="divider"></div> 
+   <div class="tabletext" id="ttext10">
+    $150,000 
+    <span>5/1 ARM</span>
+   </div> 
+   <div class="tabletext" id="ttext11">$899/mo</div> 
+   <div class="tabletext" id="ttext12">4.27% APR</div> 
+   <div class="rowbgover" id="rowbgover4"></div> 
+   <div class="rowbgani" id="rowbgani4" style="opacity: 0.352857;"></div> 
+   <div class="rowbg" id="rowbg4"></div> 
+  </div> 
+  <div class="row" id="row5" style="left: 0px; opacity: 1;"> 
+   <div class="divider"></div> 
+   <div class="tabletext" id="ttext13">
+    $300,000 
+    <span>5/1 ARM</span>
+   </div> 
+   <div class="tabletext" id="ttext14">$1,773/mo</div> 
+   <div class="tabletext" id="ttext15">4.15% APR</div> 
+   <div class="rowbgover" id="rowbgover5"></div> 
+   <div class="rowbgani" id="rowbgani5"></div> 
+   <div class="rowbg" id="rowbg5"></div> 
+  </div> 
+ </div> 
+ <div id="cta" style="bottom: 26px; opacity: 1;">
+  <div id="shine" style="left: -220px;"></div>
+ </div> 
+ <div id="logo"></div> 
+ <div id="terms">
+  Terms &amp; Conditions apply. NMLS#1136
+ </div> 
+ <button id="hit"></button> 
+</div><script language="javascript">
+        var scripts = document.getElementsByTagName('script'),
+        me = scripts[scripts.length - 1],
+        sourceWidgetId = me.parentNode.id,
+        clickTAG = "https://ads.revjet.com/click/tag6805/7634848455258586644/1?_crm=2&__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&adkey=38b&hx=3756769&agrp=5139586&slot=tag6805&impts=1520868074531&ad=crv12067&_cx=$$CX$$&_cy=$$CY$$&_celt=$$ELT-ID$$&_celtid=$$ELT-IDS$$";
+</script>
+<script src="./TweenMax.min.js.download"></script>
+<script>
+var injectScript = function (d, t, script, callback) {
+    var g = d.createElement(t),
+        s = d.getElementById('banner');
+    g.src = script;
+    if (callback) {
+        g.addEventListener('load', function () {
+            callback.apply(null, arguments)
+        });
+    }
+    s.parentNode.insertBefore(g, s);
+};
+function init() {
+    if (window.TweenLite) {
+                    injectScript(document, 'script',
+                        'https://cdn.revjet.com/~cdn/Ads/de/e3/green-sock-1498503330677.js', function () {});
+    } else {
+        setTimeout(init, 1);
+    }
+}
+init();
+</script>
+</a>
+</div>
+
+</div>
+
+
+	</div>
+ </div>
+ <!-- Salt Pixel -->
+<script type="text/javascript">
+window.Salt = {
+  
+  "start": "900",
+  "firstQuartile": "901",
+  "midpoint": "902",
+  "thirdQuartile": "903",
+  "complete": "904",
+  "invisible": "905",
+  "adsDomainName": "ads.revjet.com",
+  "pixelPattern": "https://ads.revjet.com/track/%%PIXEL%%?__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&__adt=7634848455258586644&__ade=1&latent=%%LATENT%%",
+  "duration": 30
+};
+</script>
+
+ <script type="text/javascript">
+ var revjet = revjet || {};
+ var eligibleActions = [3821722];
+ 	eligibleActions = eligibleActions.concat([55771]);
+	revjet.elements = {
+		"widgets": [
+	 		{"id": "el3821719", "type": "container_element", "parentId": null}, {"id": "elframe_element3821677", "type": "frame_element", "parentId": "el3821719"}, {"id": "elframe_element3821680", "type": "frame_element", "parentId": "elframe_element3821677"}, {"id": "el3821692", "type": "html5_element", "parentId": "elframe_element3821680", "disableBrowserEvents": true},
+		],
+		"actions": window._disanim ? [] : [{"id": 55771,
+	"type": "start_animation",
+	"sourceWidgetId": "elframe_element3821680",
+	"events": [{
+	"type": "before_show"
+}],
+	"widgetId": "elframe_element3821680",
+        "animatedWidgets": [],
+	"animationName": "On Load",
+	"className": "run-animation-on-load",
+        "finalClassName": "run-animation-on-load-final",
+	"maxRunCount": "",
+	"execDelay": "0"
+}, {"id": 3821722,
+	"type": "link",
+	"sourceWidgetId": "el3821719",
+	"events": [{
+	"type": "click"
+}],
+	"url": click_url,
+	"target": click_target
+},],
+		"tracking": [
+				{
+	'type': 'open_link',
+	'pixels': [{"type":"html","code":"\u003Cimg src=\"https://adfarm.mediaplex.com/ad/ck/18916-133472-2151-6?mpt=1520868074\" width=\"1\" height=\"1\" style=\"border-style: none;\" /\u003E"}]
+},
+{
+	'type': 'click_heatmap',
+	'pixels': [{"type":"image","url":"https://ads.revjet.com/track/2500?__ads=ip28811-9Q9AKphMK9xnXzgZSDgGiQ&__adt=7634848455258586644&__ade=1"}]
+},
+		],
+		"options": {
+			'hideBody': true,
+			'hideMethod': 'visibility',
+			'disableAnimation': window._disanim
+		},
+		"personalization": [],
+		"eligibleActions": eligibleActions
+	};
+ </script>
+
+
+
+
+<!-- revjet-tracking -->
+		<img src="./cvo.gif" width="1" height="1" style="border-style: none;">
+
+<img src="./18916-133472-2151-6" width="1" height="1" style="border-style: none;">
+<img height="0" width="0" style="border-style:none;" alt="" src="./1000">
+
+<!-- /revjet-tracking -->
+		
+		<script type="text/javascript">
+			function pauseAnimation() {
+				var element = document.getElementById('ad_body');
+				if (!element.classList.contains('animation_paused')) {
+					element.classList.add('animation_paused');
+				}
+
+				element.getBoundingClientRect();
+			}
+
+			function resumeAnimation() {
+				var element = document.getElementById('ad_body');
+				if (element.classList.contains('animation_paused')) {
+					element.classList.remove('animation_paused');
+				}
+
+				element.getBoundingClientRect();
+			}
+
+			var prefixes = ['moz', 'ms', 'webkit'];
+			var hiddenProperty = 'hidden';
+			var visibilityChangeEventName = 'visibilitychange';
+
+			for (var i = 0; i < prefixes.length; i++) {
+				if (document[prefixes[i] + 'Hidden']) {
+					hiddenProperty = prefixes[i] + 'Hidden';
+					visibilityChangeEventName = prefixes[i] + visibilityChangeEventName;
+					break;
+				}
+			}
+
+			document.addEventListener(visibilityChangeEventName, function() {
+				if (document[hiddenProperty]) {
+					pauseAnimation();
+				} else {
+					resumeAnimation();
+				}
+			}, false);
+		</script>
+	
+
+<img src="./900" width="1" height="1" style="border-style: none;"><img src="./901" width="1" height="1" style="border-style: none;"></body></html>
