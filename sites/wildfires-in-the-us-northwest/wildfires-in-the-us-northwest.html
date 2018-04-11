@@ -42,19 +42,41 @@
       <h1>Wildfires in the US Northwest</h1>
       <h3>Washinton, Montana, Oregon, Wyoming, and Idaho</h3>
 	  <h4>Maura Timmons</h4>
-         <h3>FIRST SECTION HEADING</h3>
+
+     <h3>Introduction To The Region</h3>
 		 <hr><!--this draws a line across the page, which I put under each section heading in the example-->
-		 <p>Paragraph text goes between these</p>
-     <br>
+		   <p>The fire season, generally, begins at the end of spring and persists into the fall. On some occasions, however, the fires will persist until the first snow fall of the season. The northwest includes states such as Washington, Idaho, Wyoming, Oregon, and Montana, but other states, such as California, Colorado, and (occasionally) Arizona, also suffer from frequent wildfires. Due to these fires, Indigenous communities may suffer from loss of economical income, their livelihoods, their homes, family members, livestock, and many other factors. Some of the most detrimental fires in recent years to federally recognized tribes includes the Spotted Eagle Fire (MT), Carpenter Road Fire (WA), Cougar Creek Fire (WA), and the North Star Fire (WA).</p>
+       <br>
       <figure style= "float: left; width: 50%; padding-right: 20px; padding-bottom: 5px;">
-          <img src="img/cougar_creek_fire-yakama_nation.jpg" width= "100%">
+          <img src="images/1.jpg" width= "100%">
           <figcaption><a href="#" rel="citation" data-toggle="popover" data-content="Staff, I. C. T.  2015	Wildfires Scorch More Than 500 Square Miles on Reservations in Northwest. Indian Country Media Network. https://indiancountrymedianetwork.com/news/environment/wildfires-scorch-more-than-500-square-miles-on-reservations-in-northwest/, accessed March 12, 2018.">Image1</a>- "Cougar Creek Fire on the Yakama Nation"</figcaption>
         </figure>
 
-     <h3>Next section</h3>
+     <h3>Brief History of Major Wildfires</h3>
       <hr>
-		 <a href="#" rel="citation" data-toggle="popover" data-content=""><!--this is the required <a href> tag for inline reference popups--></a>
-		 <br><!--this creates a break, to separate things a little better-->
+
+      <br>
+
+    <h3>Recent Fires and How it's Impacted Indigenous Peoples</h3>
+      <hr>
+
+      <br>
+
+    <h3>Fire Management and Adapting To Changing Climates</h3>
+      <hr>
+
+
+      <br>
+
+    <h3>Sources</h3>
+      <hr>
+
+      <br>
+
+    <h3>Images</h3>
+      <hr>
+
+      <br>
 
 
 
@@ -77,37 +99,36 @@
 
 
 
+    </div>
 
-	</div>
+        <br>
+          <br>
 
-       <br>
-         <br>
+<!-- centralized footer -->
+<div id="central-foot">
 
-    <!-- centralized footer -->
-    <div id="central-foot">
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../leaflet-omnivore-master/leaflet-omnivore.js"></script>
+<script src="../js/leaflet.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("a[rel=citation]").popover({
+ placement : 'top'
+}).click(function (p) {
+ p.preventDefault();
+ var $self = $(this);
+ setTimeout(function () {
+   $self.popover('hide');
+ }, 4000);
+});
+});
+</script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="../leaflet-omnivore-master/leaflet-omnivore.js"></script>
-    <script src="../js/leaflet.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("a[rel=citation]").popover({
-				placement : 'top'
-			}).click(function (p) {
-				p.preventDefault();
-				var $self = $(this);
-				setTimeout(function () {
-					$self.popover('hide');
-				}, 4000);
-			});
-		});
-	</script>
+<!-- Calls centralized navbar -->
+<script src="../../centralize-nav-foot/sites-nav-foot.js"></script>
 
-    <!-- Calls centralized navbar -->
-    <script src="../../centralize-nav-foot/sites-nav-foot.js"></script>
-
-	</body></html>
+</body></html>
